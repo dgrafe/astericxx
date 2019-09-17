@@ -1,0 +1,4 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item020" length="1">
+  <datum name="SectorNumber" type="uint8_t" bits="8" mask="0xFF" offset="0"/>
+</FixedLength>

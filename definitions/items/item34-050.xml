@@ -1,0 +1,146 @@
+<?xml version = "1.0"?> 
+<compound name="item050">
+  <FixedLength name="item050_com" length="1" component_name="COM">
+   <enums>
+    <item050NOGO>
+      <Operational value="0"/>
+      <Inhibited   value="1"/>
+    </item050NOGO>
+    <item050RDPC>
+      <RDPC1 value="0"/>
+      <RDPC2   value="1"/>
+    </item050RDPC>
+    <item050RDPR>
+      <Default value="0"/>
+      <Reset   value="1"/>
+    </item050RDPR>
+    <item050OVLRDP>
+      <Default value="0"/>
+      <Overload   value="1"/>
+    </item050OVLRDP>
+    <item050OVLXMT>
+      <Default value="0"/>
+      <Overload   value="1"/>
+    </item050OVLXMT>
+    <item050MSC>
+      <MonitoringConnected    value="0"/>
+      <MonitoringDisconnected value="1"/>
+    </item050MSC>
+    <item050TSV>
+      <Valid   value="0"/>
+      <Invalid value="1"/>
+    </item050TSV>
+   </enums>
+    
+    <datum name="NOGO" type="item050NOGO" bits="1" mask="0x80" offset="0"/>
+    <datum name="RDPC" type="item050RDPC" bits="1" mask="0x40" offset="1"/>
+    <datum name="RDPR" type="item050RDPR" bits="1" mask="0x20" offset="1"/>
+    <datum name="OVLRDP" type="item050OVLRDP" bits="1" mask="0x10" offset="1"/>
+    <datum name="OVLXMT" type="item050OVLXMT" bits="1" mask="0x08" offset="1"/>
+    <datum name="MSC" type="item050MSC" bits="1" mask="0x04" offset="1"/>
+    <datum name="TSV" type="item050TSV" bits="1" mask="0x02" offset="1"/>
+  </FixedLength>
+  <Spare name="item050_spare1" class="Spare" length="0" component_name="spare1"/>
+  <Spare name="item050_spare2" class="Spare" length="0" component_name="spare2"/>
+  <FixedLength name="item050_psr" length="1" component_name="PSR">
+   <enums>
+    <item050ANT>
+      <Antenna1 value="0"/>
+      <Antenna2   value="1"/>
+    </item050ANT>
+    <item050CH_AB>
+      <NO_CHANNEL value="0"/>
+      <CHANNEL_A   value="1"/>
+      <CHANNEL_B   value="2"/>
+      <CHANNEL_AB  value="3"/>
+    </item050CH_AB>
+    <item050PSROVL>
+      <NoOverload value="0"/>
+      <Overload   value="1"/>
+    </item050PSROVL>
+    <item050PSRMSC>
+      <MonitoringSystemConnected value="0"/>
+      <MonitoringSystemDisconnected   value="1"/>
+    </item050PSRMSC>
+   </enums>
+    
+    <datum name="ANT" type="item050ANT" bits="1" mask="0x80" offset="0"/>
+    <datum name="CH_AB" type="item050CH_AB" bits="2" mask="0x60" offset="1"/>
+    <datum name="OVL" type="item050PSROVL" bits="1" mask="0x20" offset="3"/>
+    <datum name="MSC" type="item050PSRMSC" bits="1" mask="0x10" offset="4"/>
+  </FixedLength>
+  <FixedLength name="item050_ssr" length="1" component_name="SSR">
+   <enums>
+    <item050SSRANT>
+      <Antenna1 value="0"/>
+      <Antenna2   value="1"/>
+    </item050SSRANT>
+    <item050SSRCH_AB>
+      <NO_CHANNEL value="0"/>
+      <CHANNEL_A   value="1"/>
+      <CHANNEL_B   value="2"/>
+      <CHANNEL_AB  value="3"/>
+    </item050SSRCH_AB>
+    <item050SSROVL>
+      <NoOverload value="0"/>
+      <Overload   value="1"/>
+    </item050SSROVL>
+    <item050SSRMSC>
+      <MonitoringSystemConnected value="0"/>
+      <MonitoringSystemDisconnected   value="1"/>
+    </item050SSRMSC>
+   </enums>
+    
+    <datum name="ANT" type="item050SSRANT" bits="1" mask="0x80" offset="0"/>
+    <datum name="CH_AB" type="item050SSRCH_AB" bits="2" mask="0x60" offset="1"/>
+    <datum name="OVL" type="item050SSROVL" bits="1" mask="0x10" offset="3"/>
+    <datum name="MSC" type="item050SSRMSC" bits="1" mask="0x08" offset="4"/>
+  </FixedLength>
+  <FixedLength name="item050_mds" length="2" component_name="MDS">
+   <enums>
+    <item050MDSANT>
+      <Antenna1 value="0"/>
+      <Antenna2   value="1"/>
+    </item050MDSANT>
+    <item050MDSCH_AB>
+      <NO_CHANNEL value="0"/>
+      <CHANNEL_A   value="1"/>
+      <CHANNEL_B   value="2"/>
+      <IllegalCombination  value="3"/>
+    </item050MDSCH_AB>
+    <item050SUROVL>
+      <NoOverload value="0"/>
+      <Overload   value="1"/>
+    </item050SUROVL>
+    <item050MDSMSC>
+      <MonitoringSystemConnected value="0"/>
+      <MonitoringSystemDisconnected   value="1"/>
+    </item050MDSMSC>
+    <item050SCF>
+      <CHANNEL_A value="0"/>
+      <CHANNEL_B value="1"/>
+    </item050SCF>
+    <item050DLF>
+      <CHANNEL_A value="0"/>
+      <CHANNEL_B value="1"/>
+    </item050DLF>
+    <item050SCFOVL>
+      <NoOverload value="0"/>
+      <Overload   value="1"/>
+    </item050SCFOVL>
+    <item050DLFOVL>
+      <NoOverload value="0"/>
+      <Overload   value="1"/>
+    </item050DLFOVL>
+   </enums>
+    
+    <datum name="ANT" type="item050MDSANT" bits="1" mask="0x8000" offset="0"/>
+    <datum name="CH_AB" type="item050MDSCH_AB" bits="2" mask="0x6000" offset="1"/>
+    <datum name="OVL" type="item050SUROVL" bits="1" mask="0x1000" offset="3"/>
+    <datum name="MSC" type="item050MDSMSC" bits="1" mask="0x0800" offset="4"/>
+    <datum name="SCF" type="item050SCF" bits="1" mask="0x0400" offset="5"/>
+    <datum name="DLF" type="item050DLF" bits="1" mask="0x0200" offset="6"/>
+    <datum name="OVL_SCF" type="item050SCFOVL" bits="1" mask="0x0100" offset="7"/>
+    <datum name="OVL_DLF" type="item050DLFOVL" bits="1" mask="0x0080" offset="8"/>
+  </FixedLength>
+</compound>

@@ -1,0 +1,4 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item041" length="2">
+  <datum name="AntennaRotationSpeed" type="uint32_t" bits="16" mask="0xFFFFFF" offset="0"/>
+</FixedLength>

@@ -1,0 +1,29 @@
+<?xml version = "1.0"?> 
+<repetitive name="item070">
+  <FixedLength name="item070_rep" length="2">
+   <enums>
+    <item070CounterType>
+      <NoDetection value="0"/>
+      <SinglePSRReport value="1"/>
+      <SingleSSRReport value="2"/>
+      <SSRPSRReport value="3"/>
+      <SingleAllCallReport value="4"/>
+      <SingleRollCallReport value="5"/>
+      <AllCallPSRReport value="6"/>
+      <RollCallPSRReport value="7"/>
+      <FilterWeatherData value="8"/>
+      <FilterJammingStrobe value="9"/>
+      <FilterPSR value="10"/>
+      <FilterSSR value="11"/>
+      <FilterSSRPSR value="12"/>
+      <FilterEnhancedSurveillanceData value="13"/>
+      <FilterPSREnhancedSurveillanceData value="14"/>
+      <FilterPSREnhancedSSRNotPrime value="15"/>
+      <FilterPSREnhancedSSR value="16"/>
+    </item070CounterType>
+  </enums>
+    
+    <datum name="Type" type="item070CounterType" bits="5" mask="0xF800" offset="0"/>
+    <datum name="Counter" type="uint16_t" bits="11" mask="0x07FF" offset="5"/>
+  </FixedLength>
+</repetitive>

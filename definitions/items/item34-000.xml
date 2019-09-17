@@ -1,0 +1,13 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item000" length="1">
+  <enums>
+    <item000MessageType>
+      <NorthMarker value="1"/>
+      <SectorCrossing value="2"/>
+      <GeoFiltering value="3"/>
+      <JammingStrobe value="4"/>
+    </item000MessageType>
+  </enums>
+
+  <datum name="MessageType" type="item000MessageType" bits="8" mask="0xFF" offset="0"/>
+</FixedLength>

@@ -1,0 +1,15 @@
+<?xml version = "1.0"?> 
+<category name="cat34" identifier="34">
+  <item class="item010" name="Item010" filename="item34-010"/>
+  <item class="item000" name="Item000" filename="item34-000"/>
+  <item class="item030" name="Item030" filename="item34-030"/>
+  <item class="item020" name="Item020" filename="item34-020"/>
+  <item class="item041" name="Item041" filename="item34-041"/>
+  <item class="item050" name="Item050" filename="item34-050"/>
+  <item class="item060" name="Item060" filename="item34-060"/>
+  <item class="item070" name="Item070" filename="item34-070"/>
+  <item class="item100" name="Item100" filename="item34-100"/>
+  <item class="item110" name="Item110" filename="item34-110"/>
+  <item class="item120" name="Item120" filename="item34-120"/>
+  <item class="item090" name="Item090" filename="item34-090"/>
+</category>

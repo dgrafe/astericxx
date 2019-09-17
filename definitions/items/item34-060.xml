@@ -1,0 +1,93 @@
+<?xml version = "1.0"?> 
+<compound name="item060">
+  <FixedLength name="item060_com" length="1" component_name="COM">
+   <enums>
+    <item060RED_RDP>
+      <NoReduction    value="0"/>
+      <ReductionStep1 value="1"/>
+      <ReductionStep2 value="2"/>
+      <ReductionStep3 value="3"/>
+      <ReductionStep4 value="4"/>
+      <ReductionStep5 value="5"/>
+      <ReductionStep6 value="6"/>
+      <ReductionStep7 value="7"/>
+    </item060RED_RDP>
+    <item060RED_XMT>
+      <NoReduction    value="0"/>
+      <ReductionStep1 value="1"/>
+      <ReductionStep2 value="2"/>
+      <ReductionStep3 value="3"/>
+      <ReductionStep4 value="4"/>
+      <ReductionStep5 value="5"/>
+      <ReductionStep6 value="6"/>
+      <ReductionStep7 value="7"/>
+    </item060RED_XMT>
+   </enums>
+    
+    <datum name="RED_RDP" type="item060RED_RDP" bits="3" mask="0x70" offset="1"/>
+    <datum name="RED_XMT" type="item060RED_XMT" bits="3" mask="0x0E" offset="4"/>
+  </FixedLength>
+  <Spare name="item060_spare1" class="Spare" length="0" component_name="spare1"/>
+  <Spare name="item060_spare2" class="Spare" length="0" component_name="spare2"/>
+  <FixedLength name="item060_psr" length="1" component_name="PSR">
+     <enums>
+       <item060POL>
+        <LinearPolarization    value="0"/>
+        <CircularPolarization value="1"/>
+       </item060POL>
+      <item060RED_RAD>
+       <NoReduction    value="0"/>
+       <ReductionStep1 value="1"/>
+       <ReductionStep2 value="2"/>
+       <ReductionStep3 value="3"/>
+       <ReductionStep4 value="4"/>
+       <ReductionStep5 value="5"/>
+        <ReductionStep6 value="6"/>
+        <ReductionStep7 value="7"/>
+      </item060RED_RAD>
+      <item060STC>
+        <Map_1    value="0"/>
+        <Map_2    value="1"/>
+        <Map_3    value="2"/>
+        <Map_4    value="3"/>
+      </item060STC>
+    </enums>
+    <datum name="POL" type="item060POL" bits="1" mask="0x80" offset="0"/>
+    <datum name="RED_RAD" type="item060RED_RAD" bits="3" mask="0x70" offset="1"/>
+    <datum name="STC" type="item060STC" bits="2" mask="0xC0" offset="4"/>
+  </FixedLength>
+  <FixedLength name="item060_ssr" length="1" component_name="SSR">
+    <enums>
+      <item060SSRRED_RAD>
+        <NoReduction    value="0"/>
+        <ReductionStep1 value="1"/>
+        <ReductionStep2 value="2"/>
+        <ReductionStep3 value="3"/>
+        <ReductionStep4 value="4"/>
+        <ReductionStep5 value="5"/>
+        <ReductionStep6 value="6"/>
+        <ReductionStep7 value="7"/>
+      </item060SSRRED_RAD>
+    </enums>
+    <datum name="RED_RAD" type="item060SSRRED_RAD" bits="3" mask="0xE0" offset="0"/>
+   </FixedLength>
+   <FixedLength name="item060_mds" length="1" component_name="MDS">
+    <enums>
+      <item060MDSRED_RAD>
+        <NoReduction    value="0"/>
+        <ReductionStep1 value="1"/>
+        <ReductionStep2 value="2"/>
+        <ReductionStep3 value="3"/>
+        <ReductionStep4 value="4"/>
+        <ReductionStep5 value="5"/>
+        <ReductionStep6 value="6"/>
+        <ReductionStep7 value="7"/>
+      </item060MDSRED_RAD>
+      <item060MDSCLU>
+        <Autonomous    value="0"/>
+        <NotAutonomous value="1"/>
+      </item060MDSCLU>
+    </enums>
+    <datum name="CLU" type="item060MDSCLU" bits="1" mask="0x10" offset="3"/>
+  </FixedLength>
+</compound>

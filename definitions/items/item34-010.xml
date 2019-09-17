@@ -1,0 +1,5 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item010" length="2">
+  <datum name="SAC" type="uint8_t" bits="8" mask="0xFF00" offset="0"/>
+  <datum name="SIC" type="uint8_t" bits="8" mask="0x00FF" offset="8"/>
+</FixedLength>

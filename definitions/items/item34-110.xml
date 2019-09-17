@@ -1,0 +1,18 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item110" length="1">
+  <enums>
+    <item110DataFilterType>
+      <FilterWeatherData value="1"/>
+      <FilterJammingStrobe value="2"/>
+      <FilterPSR value="3"/>
+      <FilterSSRMDS value="4"/>
+      <FilterSSRMDSPSR value="5"/>
+      <FilterEnhancedSurveillanceData value="6"/>
+      <FilterPSREnhancedSurveillanceData value="7"/>
+      <FilterPSREnhancedSSRMDSNotPrime value="8"/>
+      <FilterPSREnhancedAll value="9"/>
+    </item110DataFilterType>
+  </enums>
+
+  <datum name="Type" type="item110DataFilterType" bits="8" mask="0xFF" offset="0"/>
+</FixedLength>

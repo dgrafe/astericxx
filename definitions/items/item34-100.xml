@@ -1,0 +1,7 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item100" length="8">
+  <datum name="RhoStart" type="uint16_t" bits="16" mask="0xFFFF000000000000" offset="0"/>
+  <datum name="RhoEnd" type="uint16_t" bits="16" mask="0x0000FFFF00000000" offset="16"/>
+  <datum name="ThetaStart" type="uint16_t" bits="16" mask="0x00000000FFFF0000" offset="32"/>
+  <datum name="ThetaEnd" type="uint16_t" bits="16" mask="0x000000000000FFFF" offset="48"/>
+</FixedLength>
