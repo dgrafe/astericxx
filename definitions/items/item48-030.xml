@@ -1,0 +1,33 @@
+<?xml version = "1.0"?> 
+<ExtendedLength name="item48_030">
+  <Part name="item030_primary" length="1" part_name="warning1">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary1" length="1" part_name="warning2">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary2" length="1" part_name="warning3">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary3" length="1" part_name="warning4">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary4" length="1" part_name="warning5">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary5" length="1" part_name="warning6">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary6" length="1" part_name="warning7">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary7" length="1" part_name="warning8">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary8" length="1" part_name="warning9">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+  <Part name="item030_secondary9" length="1" part_name="warning10">
+    <datum name="Code" type="uint8_t" bits="7" mask="0xFE" offset="0"/>
+  </Part>
+</ExtendedLength>

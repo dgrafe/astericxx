@@ -4,10 +4,12 @@
 <xsl:import href="item-fixed-length.xsl" />
 <xsl:import href="item-repetitive.xsl" />
 <xsl:import href="item-compound.xsl" />
+<xsl:import href="item-extended-length.xsl" />
 <xsl:output method="html" omit-xml-declaration="yes"/>
    <xsl:template match = "/"> 
 #include "FixedLength.hpp"
 #include "RepetitiveDataItem.hpp"
+#include "SecondaryPart.hpp"
 #include "Spare.hpp"
 
 namespace astericxx {

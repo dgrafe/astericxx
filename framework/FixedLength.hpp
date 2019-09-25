@@ -29,6 +29,7 @@ class FixedLength : public ISerializeDeserialize {
 
 public:
   FixedLength(uint16_t nrBytes);
+  FixedLength() = delete;
   bool operator==(FixedLength& other);
   bool operator!=(FixedLength& other);
   
@@ -39,6 +40,8 @@ public:
   std::istream& operator<< (std::istream& stream);
   
 protected:
+  std::vector<uint8_t> m_uData;
+    
   template <class T>
   void setFixedValue(T value, uint16_t bitlength, uint16_t offset_bits, uint64_t mask) {
     
@@ -61,7 +64,7 @@ protected:
     
     // TODO: Byte Ordering currently not taken into account
     for (unsigned int i = involvedBytes; i > 0; i--) {
-     
+      
       bitmask = (0xFF & mask);
       m_uData[i - 1] &= ~bitmask;
       m_uData[i - 1] |= (buf & bitmask);
@@ -84,7 +87,7 @@ protected:
 
     // TODO: Byte Ordering currently not taken into account
     for (unsigned int i = 0; i < involvedBytes; i++) {
-     
+      
       buf <<= 8;
       bitmask = (0xFF & (mask >> ((involvedBytes - 1 - i) * 8)));
       buf |= (m_uData[i]  & bitmask);
@@ -99,9 +102,6 @@ protected:
     
     return static_cast<T>(buf);
   }
-  
-private:
-  std::vector<uint8_t> m_uData;
 };
   
 }

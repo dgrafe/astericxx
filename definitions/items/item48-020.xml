@@ -1,0 +1,76 @@
+<?xml version = "1.0"?> 
+<ExtendedLength name="item48_020">
+  <Part name="item020_primary" length="1" part_name="part1">
+   <enums>
+    <item020Typ>
+      <NoDetection      value="0"/>
+      <SinglePSR        value="1"/>
+      <SingleSSR        value="2"/>
+      <SSRPSR           value="3"/>
+      <ModeSAllCall     value="4"/>
+      <ModeSRollCall    value="5"/>
+      <ModeSAllCallPSR  value="6"/>
+      <ModeSRollCallPSR value="7"/>
+    </item020Typ>
+    <item020SIM>
+      <ActualTargetReport value="0"/>
+      <SimulatedTargetReport   value="1"/>
+    </item020SIM>
+    <item020RDP>
+      <RDPChain1 value="0"/>
+      <RDPChain2   value="1"/>
+    </item020RDP>
+    <item020SPI>
+      <AbsenceOfSPI value="0"/>
+      <SPI   value="1"/>
+    </item020SPI>
+    <item020RAB>
+      <ReportFromTransponder value="0"/>
+      <ReportFromFFM   value="1"/>
+    </item020RAB>
+   </enums>
+    
+    <datum name="Typ" type="item020Typ" bits="3" mask="0xE0" offset="0"/>
+    <datum name="SIM" type="item020SIM" bits="1" mask="0x10" offset="3"/>
+    <datum name="RDP" type="item020RDP" bits="1" mask="0x08" offset="4"/>
+    <datum name="SPI" type="item020SPI" bits="1" mask="0x04" offset="5"/>
+    <datum name="RAB" type="item020RAB" bits="1" mask="0x02" offset="6"/>
+  </Part>
+  <Part name="item020_secondary" length="1" part_name="part2">
+   <enums>
+    <item020TST>
+      <RealTarget      value="0"/>
+      <TestTarget      value="1"/>
+    </item020TST>
+    <item020ERR>
+      <NoExtendedRange value="0"/>
+      <ExtendedRange   value="1"/>
+    </item020ERR>
+    <item020XPP>
+      <NoXPulsePresent value="0"/>
+      <XPulsePresent   value="1"/>
+    </item020XPP>
+    <item020ME>
+      <NoMilitaryEmergency value="0"/>
+      <MilitaryEmergency   value="1"/>
+    </item020ME>
+    <item020MI>
+      <NoMilitaryIdentification value="0"/>
+      <MilitaryIdentification   value="1"/>
+    </item020MI>
+    <item020FOE>
+      <NoMode4        value="0"/>
+      <FriendlyTarget value="1"/>
+      <UnknownTarget  value="2"/>
+      <NoReply        value="3"/>
+    </item020FOE>
+   </enums>
+    
+    <datum name="TST" type="item020TST" bits="1" mask="0x80" offset="0"/>
+    <datum name="ERR" type="item020ERR" bits="1" mask="0x40" offset="1"/>
+    <datum name="XPP" type="item020XPP" bits="1" mask="0x20" offset="2"/>
+    <datum name="ME" type="item020ME" bits="1" mask="0x10" offset="3"/>
+    <datum name="MI" type="item020MI" bits="1" mask="0x08" offset="4"/>
+    <datum name="FOE" type="item020FOE" bits="2" mask="0x06" offset="5"/>
+  </Part>
+</ExtendedLength>

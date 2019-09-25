@@ -50,7 +50,7 @@ bool FixedLength::dataExisting() {
 
 std::istream& FixedLength::operator<< (std::istream& stream) {
   
-  std::for_each(m_uData.begin(), m_uData.end(), [&stream](uint8_t& i) { stream >> std::noskipws >> i;});
+  std::for_each(m_uData.begin(), m_uData.end(), [&stream](uint8_t& i) { stream >> std::noskipws >> i; });
   
   return stream;
 }

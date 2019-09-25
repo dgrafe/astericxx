@@ -1,0 +1,32 @@
+<?xml version = "1.0"?> 
+<category name="cat48" identifier="48">
+  <item class="item48_010" name="Item010" filename="item48-010"/>
+  <item class="item48_140" name="Item140" filename="item48-140"/>
+  <item class="item48_020" name="Item020" filename="item48-020"/>
+  <item class="item48_040" name="Item040" filename="item48-040"/>
+  <item class="item48_070" name="Item070" filename="item48-070"/>
+  <item class="item48_090" name="Item090" filename="item48-090"/>
+  <item class="item48_130" name="Item130" filename="item48-130"/>
+  
+  <item class="item48_220" name="Item220" filename="item48-220"/>
+  <item class="item48_240" name="Item240" filename="item48-240"/>
+  <item class="item48_250" name="Item250" filename="item48-250"/>
+  <item class="item48_161" name="Item161" filename="item48-161"/>
+  <item class="item48_042" name="Item042" filename="item48-042"/>
+  <item class="item48_200" name="Item200" filename="item48-200"/>
+  <item class="item48_170" name="Item170" filename="item48-170"/>
+  
+  <item class="item48_210" name="Item210" filename="item48-210"/>
+  <item class="item48_030" name="Item030" filename="item48-030"/>
+  <item class="item48_080" name="Item080" filename="item48-080"/>
+  <item class="item48_100" name="Item100" filename="item48-100"/>
+  <item class="item48_110" name="Item110" filename="item48-110"/>
+  <item class="item48_120" name="Item120" filename="item48-120"/>
+  <item class="item48_230" name="Item230" filename="item48-230"/>
+  
+  <item class="item48_260" name="Item260" filename="item48-260"/>
+  <item class="item48_055" name="Item055" filename="item48-055"/>
+  <item class="item48_050" name="Item050" filename="item48-050"/>
+  <item class="item48_065" name="Item065" filename="item48-065"/>  
+  <item class="item48_060" name="Item060" filename="item48-060"/>
+</category>

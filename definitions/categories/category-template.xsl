@@ -4,6 +4,7 @@
 <xsl:output method="html" omit-xml-declaration="yes"/>
    <xsl:template match = "/"> 
 #include "IFSPEC.hpp"
+#include "IExtendedLength.hpp"
    <xsl:for-each select = "category/item">
 #include "<xsl:value-of select="@filename"/>.hpp"
    </xsl:for-each>

@@ -1,0 +1,5 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_042" length="4">
+  <datum name="XComponent" type="uint16_t" bits="16" mask="0xFFFF0000" offset="0"/>
+  <datum name="YComponent" type="uint16_t" bits="16" mask="0x0000FFFF" offset="16"/>
+</FixedLength>

@@ -1,0 +1,46 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_230" length="2">
+   <enums>
+    <item230COM>
+      <NoCapabilities    value="0"/>
+      <CommACommB value="1"/>
+      <CommACommBUplinkELM value="2"/>
+      <CommACommBUplinkELMDonlinkELM value="3"/>
+      <L5Capabilities value="4"/>
+    </item230COM>
+    <item230STAT>
+      <Airborne    value="0"/>
+      <OnGround value="1"/>
+      <AlertAirborne value="2"/>
+      <AlertOnGround value="3"/>
+      <AlertSPI value="4"/>
+      <SPI value="5"/>
+      <NotAssigned value="6"/>
+      <Unknown value="7"/>
+    </item230STAT>
+    <item230SI>
+      <SICapable    value="0"/>
+      <IICapable value="1"/>
+    </item230SI>
+    <item230MSSC>
+      <No    value="0"/>
+      <Yes value="1"/>
+    </item230MSSC>
+    <item230ARC>
+      <Resolution100ft    value="0"/>
+      <Resolution25ft value="1"/>
+    </item230ARC>
+    <item230AIC>
+      <No    value="0"/>
+      <Yes value="1"/>
+    </item230AIC>
+   </enums>
+  <datum name="COM" type="item230COM" bits="3" mask="0xE000" offset="0"/>
+  <datum name="STAT" type="item230STAT" bits="3" mask="0x1C00" offset="3"/>
+  <datum name="SI" type="item230SI" bits="1" mask="0x0200" offset="6"/>
+  <datum name="MSSC" type="item230MSSC" bits="1" mask="0x0080" offset="8"/>
+  <datum name="ARC" type="item230ARC" bits="1" mask="0x0040" offset="9"/>
+  <datum name="AIC" type="item230AIC" bits="1" mask="0x0020" offset="10"/>
+  <datum name="B1A" type="uint8_t" bits="1" mask="0x0010" offset="11"/>
+  <datum name="B1B" type="uint8_t" bits="4" mask="0x0010" offset="12"/>
+</FixedLength>

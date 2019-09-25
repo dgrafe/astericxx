@@ -1,0 +1,16 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_090" length="2">
+   <enums>
+    <item090V>
+      <CodeValidated    value="0"/>
+      <CodeNotValidated value="1"/>
+    </item090V>
+    <item090G>
+      <Default value="0"/>
+      <Garbled   value="1"/>
+    </item090G>
+   </enums>
+  <datum name="V" type="item090V" bits="1" mask="0x8000" offset="0"/>
+  <datum name="G" type="item090G" bits="1" mask="0x4000" offset="1"/>
+  <datum name="FlightLevel" type="uint16_t" bits="14" mask="0x3FFF" offset="2"/>
+</FixedLength>

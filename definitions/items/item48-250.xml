@@ -1,0 +1,8 @@
+<?xml version = "1.0"?> 
+<repetitive name="item48_250">
+  <FixedLength name="item250_MB" length="8">   
+    <datum name="Data" type="uint64_t" bits="56" mask="0xFFFFFFFFFFFFFF00" offset="0"/>
+    <datum name="BSDS1" type="uint8_t" bits="5" mask="0xFF00" offset="56"/>
+    <datum name="BSDS2" type="uint8_t" bits="5" mask="0x00FF" offset="60"/>
+  </FixedLength>
+</repetitive>

@@ -1,0 +1,60 @@
+<?xml version = "1.0"?> 
+<ExtendedLength name="item48_170">
+  <Part name="item170_first" length="1" part_name="first_part">
+    <enums>
+    <item170CNF>
+      <ConfirmedTrack value="0"/>
+      <TentaticeTrack value="1"/>
+    </item170CNF>
+    <item170RAD>
+      <CombinedTrack value="0"/>
+      <PSRTrack value="1"/>
+      <SSRMSTrack value="2"/>
+      <Invalid value="3"/>
+    </item170RAD>
+    <item170DOU>
+      <NormalConfidence value="0"/>
+      <LowConfidence value="1"/>
+    </item170DOU>
+    <item170MAH>
+      <NoHorizontalManSensed value="0"/>
+      <HorizontalManSensed value="1"/>
+    </item170MAH>
+    <item170CDM>
+      <Maintaining value="0"/>
+      <Climbing value="1"/>
+      <Descending value="2"/>
+      <Unknown value="3"/>
+    </item170CDM>
+    </enums>
+    <datum name="CNF" type="item170CNF" bits="1" mask="0x80" offset="0"/>
+    <datum name="RAD" type="item170RAD" bits="2" mask="0x60" offset="1"/>
+    <datum name="DOU" type="item170DOU" bits="1" mask="0x10" offset="3"/>
+    <datum name="MAH" type="item170MAH" bits="1" mask="0x08" offset="4"/>
+    <datum name="CDM" type="item170CDM" bits="2" mask="0x06" offset="5"/>
+  </Part>
+  <Part name="item170_second" length="1" part_name="second_part">
+    <enums>
+      <item170TRE>
+        <TrackAlive value="0"/>
+        <EndOfTrack value="1"/>
+      </item170TRE>
+      <item170GHO>
+        <TrueTarget value="0"/>
+        <GhostTrack value="1"/>
+      </item170GHO>
+      <item170SUP>
+        <TrueTarget value="0"/>
+        <GhostTrack value="1"/>
+      </item170SUP>
+      <item170TCC>
+        <RadarPlane value="0"/>
+        <TangentialPlane value="1"/>
+      </item170TCC>
+    </enums>
+    <datum name="TRE" type="item170TRE" bits="1" mask="0x80" offset="0"/>
+    <datum name="GHO" type="item170GHO" bits="1" mask="0x40" offset="1"/>
+    <datum name="SUP" type="item170SUP" bits="1" mask="0x20" offset="2"/>
+    <datum name="TCC" type="item170TCC" bits="1" mask="0x10" offset="3"/>
+  </Part>
+</ExtendedLength>

@@ -1,0 +1,4 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_260" length="7">   
+  <datum name="Data" type="uint64_t" bits="56" mask="0xFFFFFFFFFFFFFF" offset="0"/>
+</FixedLength>

@@ -1,0 +1,21 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_070" length="2">
+   <enums>
+    <item070V>
+      <CodeValidated    value="0"/>
+      <CodeNotValidated value="1"/>
+    </item070V>
+    <item070G>
+      <Default value="0"/>
+      <Garbled   value="1"/>
+    </item070G>
+    <item070L>
+      <TransponderReply value="0"/>
+      <LastScanNotExtracted   value="1"/>
+    </item070L>
+   </enums>
+  <datum name="V" type="item070V" bits="1" mask="0x8000" offset="0"/>
+  <datum name="G" type="item070G" bits="1" mask="0x4000" offset="1"/>
+  <datum name="L" type="item070L" bits="1" mask="0x2000" offset="2"/>
+  <datum name="Mode3ACode" type="uint16_t" bits="12" mask="0x0FFF" offset="4"/>
+</FixedLength>

@@ -1,0 +1,7 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_210" length="4">
+  <datum name="SigmaX" type="uint8_t" bits="8" mask="0xFF000000" offset="0"/>
+  <datum name="SigmaY" type="uint8_t" bits="8" mask="0x00FF0000" offset="8"/>
+  <datum name="SigmaV" type="uint8_t" bits="8" mask="0x0000FF00" offset="16"/>
+  <datum name="SigmaH" type="uint8_t" bits="8" mask="0x000000FF" offset="24"/>
+</FixedLength>

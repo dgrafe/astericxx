@@ -1,0 +1,24 @@
+<?xml version = "1.0"?> 
+<Compound name="item48_130">
+  <FixedLength name="item048_120_srl" length="1" component_name="SRL">
+    <datum name="SRL" type="uint8_t" bits="8" mask="0xFF" offset="0"/>
+  </FixedLength>
+  <FixedLength name="item048_120_SRR" length="1" component_name="SRR">
+    <datum name="SRR" type="uint8_t" bits="8" mask="0xFF" offset="0"/>
+  </FixedLength>
+  <FixedLength name="item048_120_sam" length="1" component_name="SAM">
+    <datum name="SAM" type="uint8_t" bits="18" mask="0xFF" offset="0"/>
+  </FixedLength>
+  <FixedLength name="item048_120_prl" length="1" component_name="PRL">
+    <datum name="PRL" type="uint8_t" bits="8" mask="0xFF" offset="0"/>
+  </FixedLength>
+  <FixedLength name="item048_120_PAM" length="1" component_name="PAM">
+    <datum name="PAM" type="int8_t" bits="8" mask="0xFF" offset="0"/>
+  </FixedLength>
+  <FixedLength name="item048_120_rpd" length="1" component_name="RPD">
+    <datum name="RPD" type="int8_t" bits="8" mask="0xFF" offset="0"/>
+  </FixedLength>
+  <FixedLength name="item048_120_APD" length="1" component_name="APD">
+    <datum name="APD" type="int8_t" bits="8" mask="0xFF" offset="0"/>
+  </FixedLength>
+</Compound>

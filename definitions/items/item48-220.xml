@@ -1,0 +1,4 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_220" length="3">
+  <datum name="AircraftAddress" type="uint32_t" bits="24" mask="0xFFFFFF" offset="0"/>
+</FixedLength>

@@ -1,0 +1,5 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_200" length="4">
+  <datum name="CalculatedGroundSpeed" type="uint32_t" bits="32" mask="0xFFFF0000" offset="0"/>
+  <datum name="CalculatedHeading" type="uint32_t" bits="32" mask="0x0000FFFF" offset="32"/>
+</FixedLength>

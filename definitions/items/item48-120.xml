@@ -1,0 +1,21 @@
+<?xml version = "1.0"?> 
+<Compound name="item48_120">
+  <FixedLength name="item048_120_rds" length="1" component_name="RadialDopplerSpeed">
+   <enums>
+    <item120DopplerSpeed>
+      <Valid value="0"/>
+      <Doubtful   value="1"/>
+    </item120DopplerSpeed>
+   </enums>
+    
+    <datum name="D" type="item120DopplerSpeed" bits="1" mask="0x80" offset="0"/>
+    <datum name="CAL" type="int16_t" bits="10" mask="0x3F" offset="6"/>
+   </FixedLength>
+   <repetitive name="item120_raw_doppler_speed" component_name="RawDopplerSpeed">
+     <FixedLength name="item48_120_raw" length="6">
+       <datum name="DOP" type="uint16_t" bits="16" mask="0xFFFF00000000" offset="0"/>
+       <datum name="AMB" type="uint16_t" bits="16" mask="0x0000FFFF0000" offset="16"/>
+       <datum name="FRQ" type="uint16_t" bits="16" mask="0x00000000FFFF" offset="32"/>
+     </FixedLength>
+   </repetitive>
+</Compound>

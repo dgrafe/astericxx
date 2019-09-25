@@ -1,0 +1,4 @@
+<?xml version = "1.0"?> 
+<FixedLength name="item48_065" length="1">
+  <datum name="ConfidenceIndicator" type="uint8_t" bits="5" mask="0x01F" offset="3"/>
+</FixedLength>
