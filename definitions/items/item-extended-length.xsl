@@ -32,6 +32,7 @@ public:
       <xsl:for-each select = "/ExtendedLength/*">
        this-<xsl:text disable-output-escaping="yes">&gt;</xsl:text><xsl:value-of select="@part_name"/> = other.<xsl:value-of select="@part_name"/>;
       </xsl:for-each>
+      return *this;
   }
 
   // comparison operators

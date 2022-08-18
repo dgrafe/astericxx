@@ -23,48 +23,56 @@
 namespace astericxx {
 
 struct imembuf: std::streambuf {
-    imembuf(uint8_t const* base, size_t size) {
-        char* p(const_cast<char*>(reinterpret_cast<const char*>(base)));
-        this->setg(p, p, p + size);
-    }
+  imembuf(uint8_t const* base, size_t size) {
+    char* p(const_cast<char*>(reinterpret_cast<const char*>(base)));
+    this->setg(p, p, p + size);
+  }
 };
 
 struct imemstream: virtual imembuf, std::istream {
-    imemstream(uint8_t const* base, size_t size)
-        : imembuf(base, size)
-        , std::istream(static_cast<std::streambuf*>(this)) {
-    }
+  imemstream(uint8_t const* base, size_t size)
+      : imembuf(base, size)
+      , std::istream(static_cast<std::streambuf*>(this)) {
+  }
 };
 
 struct omembuf: std::streambuf {
-     omembuf(uint8_t* base, size_t size){
-        this->setp(reinterpret_cast<char*>(base), reinterpret_cast<char*>(base) + size);
-     }
+  omembuf(uint8_t* base, size_t size){
+    this->setp(reinterpret_cast<char*>(base), reinterpret_cast<char*>(base) + size);
+  }
 };
 
 struct omemstream: virtual omembuf, std::ostream {
-    omemstream(uint8_t* base, size_t size) 
-         : omembuf(base, size)
-         , std::ostream(static_cast<std::streambuf*>(this)){
-    }
+  omemstream(uint8_t* base, size_t size)
+      : omembuf(base, size)
+      , std::ostream(static_cast<std::streambuf*>(this)){
+  }
 };
-  
+
 class ISerializeDeserialize {
 
 public:
-  virtual bool   dataExisting(){}
-  virtual size_t size_bytes() {};
-  
-  virtual std::istream& operator<<(std::istream& stream){}
-  virtual std::ostream& operator>>(std::ostream& stream){}
-  
+  virtual bool   dataExisting() {
+    return false;
+  }
+  virtual size_t size_bytes() {
+    return 0;
+  };
+
+  virtual std::istream& operator<<(std::istream& stream) {
+    return stream;
+  }
+  virtual std::ostream &operator>>(std::ostream &stream) {
+    return stream;
+  }
+
   friend std::ostream& operator<<(std::ostream& out, ISerializeDeserialize& obj);
   friend std::istream& operator>>(std::istream& in, ISerializeDeserialize& obj);
-  
+
 private:
 
 };
-  
-}
+
+} 
 
 #endif
