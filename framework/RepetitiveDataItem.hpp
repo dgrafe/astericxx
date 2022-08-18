@@ -33,97 +33,97 @@ public:
   typedef typename std::vector<T> containertype;
   typedef typename std::vector<T>::iterator iterator;
   typedef typename std::vector<T>::const_iterator const_iterator;
-  
+
   RepetitiveDataItem(){};
-  
+
   // implementing ISerializeDeserialize
   bool dataExisting() {
-    
+
     if (m_uData.size() == 0)
       return false;
-    
+
     return std::any_of(m_uData.begin(), m_uData.end(), [](T& i) { return i.dataExisting(); });
   }
-  
-  size_t size_bytes() { 
-   
+
+  size_t size_bytes() {
+
     if (m_uData.size() > 0)
       return 1 + (m_uData.size() * m_uData[0].size_bytes());
     else
       return 0;
   }
   size_t size() { return m_uData.size(); }
-  
+
   std::ostream& operator>> (std::ostream& stream) {
-   
-      // write the component count byte
-      stream << std::noskipws << static_cast<uint8_t>(m_uData.size());
-    
-      std::for_each(m_uData.begin(), m_uData.end(), [&stream](T& i) { stream << std::noskipws << i;});
-      
-      return stream;
+
+    // write the component count byte
+    stream << std::noskipws << static_cast<uint8_t>(m_uData.size());
+
+    std::for_each(m_uData.begin(), m_uData.end(), [&stream](T& i) { stream << std::noskipws << i;});
+
+    return stream;
   }
-  
+
   std::istream& operator<< (std::istream& stream) {
-    
-      uint8_t rep;
-      
-      // read the component count byte and create the necessary space
-      stream >> std::noskipws >> rep;
-      m_uData.resize(rep);
-    
-      std::for_each(m_uData.begin(), m_uData.end(), [&stream](T& i) { stream >> std::noskipws >> i;});
-      
-      return stream;
+
+    uint8_t rep;
+
+    // read the component count byte and create the necessary space
+    stream >> std::noskipws >> rep;
+    m_uData.resize(rep);
+
+    std::for_each(m_uData.begin(), m_uData.end(), [&stream](T& i) { stream >> std::noskipws >> i;});
+
+    return stream;
   }
-  
+
   bool operator==(RepetitiveDataItem<T>& other) {
-   
+
     if (this->m_uData.size() != other.m_uData.size())
       return false;
-    
-    for (int i=0; i<m_uData.size(); i++) {
-     
+
+    for (unsigned int i=0; i<m_uData.size(); i++) {
+
       if (this->m_uData[i] != other.m_uData[i])
         return false;
     }
-    
+
     return true;
   }
-  
+
   bool operator!=(RepetitiveDataItem<T>& other) {
-    
+
     return !this->operator==(other);
   }
-  
+
   T& operator[](uint8_t index) {
-    
+
     if (index >= m_uData.size())
       m_uData.resize(index + 1);
-    
+
     return m_uData.at(index);
   }
-  
+
   iterator begin() {
     return m_uData.begin();
   }
-  
+
   iterator end() {
     return m_uData.end();
   }
-  
+
   iterator cbegin() const {
     return m_uData.cbegin();
   }
-  
+
   iterator cend() const {
     return m_uData.cend();
   }
-  
+
 private:
   containertype m_uData;
 };
-  
-}
+
+} 
 
 #endif
