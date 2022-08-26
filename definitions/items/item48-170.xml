@@ -44,8 +44,8 @@
         <GhostTrack value="1"/>
       </item170GHO>
       <item170SUP>
-        <TrueTarget value="0"/>
-        <GhostTrack value="1"/>
+        <no value="0"/>
+        <yes value="1"/>
       </item170SUP>
       <item170TCC>
         <RadarPlane value="0"/>
