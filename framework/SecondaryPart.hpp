@@ -29,7 +29,7 @@ public:
   SecondaryPart(SecondaryPart& other) = delete;
   SecondaryPart& operator=(const SecondaryPart& other) {
    
-    std::cout << " assignmen secondary part: " << std::hex << (int)FixedLength::m_uData[0] << std::endl;
+    // std::cout << " assignmen secondary part: " << std::hex << (int)FixedLength::m_uData[0] << std::endl;
     
     FixedLength::m_uData = other.m_uData;
     return *this;
