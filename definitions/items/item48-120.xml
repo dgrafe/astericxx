@@ -8,7 +8,7 @@
     </item120DopplerSpeed>
    </enums>
     
-    <datum name="D" type="item120DopplerSpeed" bits="1" mask="0x80" offset="0"/>
+    <datum name="D" type="item120DopplerSpeed" bits="1" mask="0x8000" offset="0"/>
     <datum name="CAL" type="int16_t" bits="10" mask="0x3FF" offset="6"/>
    </FixedLength>
    <repetitive name="item120_raw_doppler_speed" component_name="RawDopplerSpeed">
