@@ -7,7 +7,7 @@
     <datum name="SRR" type="uint8_t" bits="8" mask="0xFF" offset="0"/>
   </FixedLength>
   <FixedLength name="item048_120_sam" length="1" component_name="SAM">
-    <datum name="SAM" type="uint8_t" bits="18" mask="0xFF" offset="0"/>
+    <datum name="SAM" type="uint8_t" bits="8" mask="0xFF" offset="0"/>
   </FixedLength>
   <FixedLength name="item048_120_prl" length="1" component_name="PRL">
     <datum name="PRL" type="uint8_t" bits="8" mask="0xFF" offset="0"/>
